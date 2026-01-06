@@ -1,0 +1,214 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #071a3d, #0a245c);
+  min-height: 100vh;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  color: #111;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  animation: fade 0.4s ease;
+}
+
+/* LOGO */
+.logo {
+  width: 70px;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+/* TÍTULOS */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #cfd8ff;
+  margin-bottom: 26px;
+}
+
+/* BOTÕES INICIAIS */
+.actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.actions button {
+  flex: 1;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd6ff;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1e90ff;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* BOTÕES */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1e90ff;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1877e6;
+}
+
+/* BOTÃO SECUNDÁRIO */
+.secondary {
+  background: #e4e7f5;
+  color: #222;
+}
+
+.secondary:hover {
+  background: #d5daf0;
+}
+
+/* MENSAGEM DE SUCESSO */
+.success {
+  background: #e9fbe9;
+  color: #176b2c;
+  border: 1px solid #9de0b1;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 14px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ADMIN LISTA */
+.user-list {
+  margin-top: 16px;
+}
+
+.user {
+  background: #f4f6ff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Ajustes para celular */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start; 
+  }
+
+  .card {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%; 
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* ANIMAÇÃO */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.admin-card {
+  width: 600px;
+}
+
+.user-box {
+  background: #f4f6ff;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  margin-left: 8px;
+}
+
+.actions .danger {
+  background: #e74c3c;
+}
+
+.user-details {
+  margin-top: 10px;
+  font-size: 14px;
+}

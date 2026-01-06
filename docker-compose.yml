@@ -1,0 +1,43 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: accessmanager_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: accessmanager
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3307:3306"  # porta externa alterada
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    container_name: accessmanager_backend
+    environment:
+      DB_HOST: mysql
+      DB_USER: user
+      DB_PASSWORD: 123456
+      DB_NAME: accessmanager
+      DB_PORT: 3306
+    depends_on:
+      - mysql
+    ports:
+      - "3001:3001"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: accessmanager_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
