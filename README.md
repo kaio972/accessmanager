@@ -153,6 +153,7 @@ Postman já configurado com endpoints:
 
 Testes incluem verificação de código de segurança, login admin, deleção com código 2010
 
+-----------------------------------------------------------------------------------------------------------
 💡 Observações Técnicas
 
 Senhas ainda não criptografadas → implementar bcrypt para produção
