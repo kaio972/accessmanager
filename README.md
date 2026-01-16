@@ -156,8 +156,6 @@ Testes incluem verificação de código de segurança, login admin, deleção co
 -----------------------------------------------------------------------------------------------------------
 💡 Observações Técnicas
 
-Senhas ainda não criptografadas → implementar bcrypt para produção
-
 JWT usado para autenticação básica
 
 Sistema modular, fácil de expandir
